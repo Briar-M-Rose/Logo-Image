@@ -1,0 +1,272 @@
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #131616;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+  flex: 1;
+  height: 25vh;
+}
+@keyframes logo-letter-twirl {
+  0% {
+    transform: rotate(-100deg);
+    transform: translateY(-100%);
+    opacity: 0%;
+  }
+  50% {
+    transform: rotate(100deg);
+    transform: translateY(50%);
+    opacity: 50;
+  }
+  100% {
+    transform: rotate(0deg);
+    transform: translateY(0%);
+    opacity: 100;
+  }
+}
+@keyframes dot-twirl {
+  0% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  90% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes i-bob {
+  0% {
+    transform: translateY(0%) rotate(0deg);
+  }
+  25% {
+    transform: translateY(10%) rotate(30deg);
+  }
+  50% {
+    transform: translateY(0%) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-10%) rotate(-30deg);
+  }
+  100% {
+    transform: translateY(0%) rotate(0deg);
+  }
+}
+@keyframes letter-bob {
+  0% {
+    transform: translateY(0%);
+  }
+  25% {
+    transform: translateY(10%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  75% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes alt-letter-bob {
+  0% {
+    transform: translateY(0%);
+  }
+  25% {
+    transform: translateY(-10%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  75% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+  #left-dot {
+    display: grid;
+    grid-column: 1 / span 1;
+    width: 25px;
+    height: auto;
+    animation-name: logo-letter-twirl;
+    animation-delay: 0s, 3s;
+    animation-duration: 0.5s, 2s;
+    animation-iteration-count: 1, infinite;
+  }
+  #b {
+    display: grid;
+    grid-column: 2 / span 1;
+    width: 110px;
+    height: auto;
+    animation-name: logo-letter-twirl, letter-bob;
+    animation-duration: 0.7s, 3s;
+    animation-delay: 0.2s, 2s;
+    animation-iteration-count: 1, infinite;
+  }
+  #left-r {
+    display: grid;
+    grid-column: 3 / span 1;
+    width: 110px;
+    height: auto;
+    animation-name: logo-letter-twirl, alt-letter-bob;
+    animation-duration: 0.9s, 3s;
+    animation-delay: 0.4s, 2s;
+    animation-iteration-count: 1, infinite;
+  }
+  #special-logo-letter {
+    display: grid;
+    grid-column: 4 / span 1;
+    width: 110px;
+    height: 115px;
+    animation-name: logo-letter-twirl, i-bob;
+    animation-duration: 1.1s, 3s;
+    animation-delay: 0.6s, 2s;
+    animation-iteration-count: 1, infinite;
+  }
+  #a {
+    display: grid;
+    grid-column: 5 / span 1;
+    width: 110px;
+    height: auto;
+    animation-name: logo-letter-twirl, alt-letter-bob;
+    animation-duration: 1.3s, 3s;
+    animation-delay: 0.8s, 2s;
+    animation-iteration-count: 1, infinite;
+  }
+  #right-r {
+    display: grid;
+    grid-column: 6 / span 1;
+    width: 110px;
+    height: auto;
+    animation-name: logo-letter-twirl, letter-bob;
+    animation-duration: 1.5s, 3s;
+    animation-delay: 1s, 2s;
+    animation-iteration-count: 1, infinite;
+  }
+  #right-dot {
+    display: grid;
+    grid-column: 7 / span 1;
+    width: 25px;
+    height: auto;
+    animation-name: logo-letter-twirl;
+    animation-delay: 1.2s, 2s;
+    animation-duration: 1.7s, 3s;
+    animation-iteration-count: 1, infinite;
+  }
+.stuff {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo logo logo . header-text header-text header-text";
+}
+
+.logo {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . . . . . .";
+  grid-area: logo;
+  margin-left: 150px;
+}
+
+.header-text { 
+  margin-top: 30px;
+  display: grid;
+  grid-column: 5 / span 2 ;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  text-align: center;
+}
+#question{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+  color: white;
+  animation-name: line-entrance;
+  animation-duration: .2s;
+}
+.question-skills {
+  font-size: 40px;
+  display: grid;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+          }
+
+ul{
+  list-style: none;
+  margin-bottom: 200;
+  padding-inline-start: 0;
+}
+@keyframes line-entrance{
+  0%{
+    transform: scale(0.1)
+  }
+  50%{
+    transform: scale(0.5)
+  }
+  100%{
+    transform: scale(1.0)
+  }
+}
+.tiny5-regular {
+  font-family: "Tiny5", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+#joy{
+  color: yellow;
+}
+.nunito-sans-thin {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+#ux{
+  color: lightblue;
+  font-size: 40px;
+}
+#ah{
+  color: hotpink;
+  font-size: 40px;
+}
+#cd{
+  color: yellow;
+  font-size: 40px;
+}
+main{
+  display: flex;
+  align-items: center;
+  margin-top: 12%;
+  margin-left: 5%;
+}
